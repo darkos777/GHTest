@@ -1,0 +1,18 @@
+Redosled:
+
+U root-u projekta otvoriti "Git Bash"
+
+git init -> inicijalizacija projekta (ranije se kreira .git folder, po default-u se ne vidi, jer je 'hidden'). Ako se ovo ne uradi, naredne
+            komande ne znaju gde da 'gledaju' i odakle da podizu kod na GitHub
+
+git status -> info o statusu fajlova (ono sto nije podignuto je crvene boje)
+
+git remote add origin https://github.com/darkos777/GHTest.git -> povezali smo se sa remote Git repozitorijumom "GHTest"
+
+git remote -> nakon sto smo povezani sa remote Git repozitorijumom, kao rezultat dobijemo "origin", sto znaci da smo povezani
+              sa remote Git repozitorijumom (origin je alijas za taj remote repozitorijum sa kojim smo povezani)
+
+git remote -v -> koristi se nakon sto smo se povezali sa remote Git repozitorijumom, da proverimo da li je to taj. Izbacice nam kao rezultat
+                 taj repozitorijum
+
+git commit -m "Some message"
