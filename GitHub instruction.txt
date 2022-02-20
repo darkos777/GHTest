@@ -15,4 +15,6 @@ git remote -> nakon sto smo povezani sa remote Git repozitorijumom, kao rezultat
 git remote -v -> koristi se nakon sto smo se povezali sa remote Git repozitorijumom, da proverimo da li je to taj. Izbacice nam kao rezultat
                  taj repozitorijum
 
-git commit -m "Some message"
+git add . -> dodavanje svega na GH iz lokalnog repozitorijuma na git staging
+
+git commit -m "Some message" -> 
