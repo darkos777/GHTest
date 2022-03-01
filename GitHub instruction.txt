@@ -50,6 +50,6 @@ git log -> provera kompletne istorije commit-a. Nakon toga, pritisnuti samo Q da
 5. Podizanje izmena na novokreirani branch:
 	git add .
 	git commit -m "Some message"
-	git push origin brach_name
+	git push origin branch_name
 	
 
