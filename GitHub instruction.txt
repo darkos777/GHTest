@@ -2,7 +2,7 @@ Redosled:
 
 U root-u projekta otvoriti "Git Bash"
 
-git init -> inicijalizacija projekta (ranije se kreira .git folder, po default-u se ne vidi, jer je 'hidden'). Ako se ovo ne uradi, naredne
+git init -> inicijalizacija projekta (kreira .git folder, po default-u se ne vidi, jer je 'hidden'). Ako se ovo ne uradi, naredne
             komande ne znaju gde da 'gledaju' i odakle da podizu kod na GitHub
 
 git status -> info o statusu fajlova (ono sto nije podignuto ili je editovano a nije podignuto je crvene boje). Ako je sve "up-to-date", dobicemo takvu poruku
@@ -13,24 +13,28 @@ git remote -> nakon sto smo povezani sa remote Git repozitorijumom, kao rezultat
               sa remote Git repozitorijumom (origin je alijas za taj remote repozitorijum sa kojim smo povezani)
 
 git remote -v -> koristi se nakon sto smo se povezali sa remote Git repozitorijumom, da proverimo da li je to taj. Izbacice nam kao rezultat
-                 taj repozitorijum
+                 repozitorijum sa kojim smo povezani
 
 git add . -> uzima ono sto smo promenili i dodaje na Git staging
 
 git commit -m "Some message" -> uzima sve sa staging-a i pravi snapshot
 
+git restore --staged filename.extension	-> vraca (restore-uje) sta staging-a i kada bismo proverili git status, taj fajl bi bio crven
+
 git push origin master -> podize izmenu/e na master branch
 
 git pull origin master -> povlacenje izmena sa master-a (iz repozitorijuma sa kojim smo povezani, sa GitHub-a)
+
+git log -> provera kompletne istorije commit-a. Nakon toga, pritisnuti samo Q da izadjemo iz istorije
 
 --------------------
 .gitignore - ???
 --------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-		RAD SA BRANCH-evima
+		RAD SA BRANCH-evima 
 
-1. Pre kreiranja novog branch-a, povuci izmene sa Master-a:
+1. Pre kreiranja novog branch-a, povuci izmene sa Master-a na lokalni repozitorijum (racunar):
    git pull origin master
 
 2. Kreiranje branch-a i switch na njega:
@@ -40,9 +44,12 @@ git pull origin master -> povlacenje izmena sa master-a (iz repozitorijuma sa ko
    git checkout branch1 ---> switch-ovanje na branch1 
    git checkout master  ---> switch-ovanje na master
 
-4. Pushovanje na odredjeni branch u repozitorijumu u kojem radimo:
-   git push origin branch_name
-
-5. Izlistavanje svih kreiranih branch-eva
+4. Izlistavanje svih kreiranih branch-eva
    git branch -a
+
+5. Podizanje izmena na novokreirani branch:
+	git add .
+	git commit -m "Some message"
+	git push origin brach_name
+	
 
